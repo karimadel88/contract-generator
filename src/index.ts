@@ -1,12 +1,13 @@
+import cors from "cors";
 import express from "express";
 import generateContract from "./controllers/generate-contract";
-const app = express();
-// Example usage
-const type = "property";
-const sellerName = "Hossam";
-const buyerName = "Ahmed";
-const contractDate = "2023-09-15";
 
+const app = express();
+const corsOptions = {
+  origin: "http://localhost:5173",
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.post("/generate", generateContract);
 

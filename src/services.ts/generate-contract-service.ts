@@ -28,7 +28,7 @@ export async function generateContractService(
         content: `I want ${language} contract I need a ${type} contract for a sale between ${sellerName} and ${buyerName} on ${contractDate} in ${contractCountry}.`,
       },
     ],
-    max_tokens: 3000,
+    max_tokens: 1000,
     temperature: 1,
   });
 

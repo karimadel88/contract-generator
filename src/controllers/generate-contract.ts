@@ -24,7 +24,9 @@ export default async function generateContract(request: any, response: any) {
     )) as string; // Ensure that it returns a string
 
     // Sanitize the date string for use as a filename
-    const sanitizedDate = contractDate.replace(/[^a-zA-Z0-9-]+/g, "_");
+    const sanitizedDate = new Date()
+      .toDateString()
+      .replace(/[^a-zA-Z0-9-]+/g, "_");
 
     // Define the filename with the sanitized date string
     const fileName = `${sanitizedDate}.html`;
