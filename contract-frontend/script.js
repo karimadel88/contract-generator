@@ -28,15 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Make a POST request to the /generate API
-    fetch("http://127.0.0.0:3000/generate", {
+    fetch("http://localhost:3000/generate", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     })
-      .then((response) => response.blob()) // Get the response as a blob
-      .then((blob) => {
+      .then(response => {
+        console.log(response);
+        return response.blob();
+      }) // Get the response as a blob
+      .then(blob => {
         // Create a blob URL for the response
         const url = window.URL.createObjectURL(blob);
 
@@ -54,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Hide the spinner
         spinner.style.display = "none";
       })
-      .catch((error) => {
+      .catch(error => {
         console.error("Error:", error);
 
         // Hide the spinner
