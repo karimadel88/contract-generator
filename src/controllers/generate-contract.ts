@@ -11,6 +11,7 @@ export default async function generateContract(request: any, response: any) {
       buyerName,
       contractDate,
       contractCountry,
+      contractType
     } = request.body;
 
     // Assuming generateContractService returns an HTML string
@@ -21,6 +22,7 @@ export default async function generateContract(request: any, response: any) {
       buyerName,
       contractDate,
       contractCountry,
+      contractType
     )) as string; // Ensure that it returns a string
 
     // Sanitize the date string for use as a filename

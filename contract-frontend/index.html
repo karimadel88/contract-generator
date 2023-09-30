@@ -1,153 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Counteract Page</title>
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-    <style>
-      body {
-        background-color: #f0f0f0; /* Set background color */
-        font-family: Arial, sans-serif; /* Change the font family */
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contract Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
 
-      .container {
-        background-color: #fff; /* Set container background color */
-        padding: 20px; /* Add some padding to the container */
-        border-radius: 10px; /* Add rounded corners to the container */
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow to the container */
-      }
+</head>
 
-      h1 {
-        color: #333; /* Change the heading color */
-      }
+<body>
+  <div class="container mt-5">
+    <h1>Contract Page</h1>
+    <form id="counteractForm">
 
-      .form-group label {
-        font-weight: bold; /* Make form labels bold */
-      }
-      #spinner {
-        display: none; /* Initially hidden */
-        border: 4px solid rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        border-top: 4px solid #3498db;
-        width: 30px;
-        height: 30px;
-        animation: spin 2s linear infinite;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      /* Custom button styles */
-      .custom-button {
-        margin-top: 10px; /* Add space between buttons */
-      }
-
-      .custom-primary-button {
-        background-color: #007bff; /* Change primary button color */
-        color: #fff; /* Change text color */
-      }
-
-      .custom-success-button {
-        background-color: #28a745; /* Change success button color */
-        color: #fff; /* Change text color */
-      }
-
-      /* Style for the re-render button */
-      .custom-secondary-button {
-        background-color: #ccc; /* Change secondary button color */
-        color: #333; /* Change text color */
-      }
-      /* Add more CSS styles as needed for further customization */
-    </style>
-  </head>
-  <body>
-    <div class="container mt-5">
-      <h1>Counteract Page</h1>
-      <form id="counteractForm">
-        <div class="form-group">
-          <label for="country">Country:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="country"
-            placeholder="Enter Country" />
-        </div>
-        <div class="form-group">
-          <label for="conflictType">Type of Conflict:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="conflictType"
-            placeholder="Enter Conflict Type" />
-        </div>
-        <div class="form-group">
-          <label for="language">Language:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="language"
-            placeholder="Enter Language" />
-        </div>
-        <div class="form-group">
-          <label for="sellerName">Seller Name:</label>
-          <input type="text" class="form-control" id="sellerName" />
-        </div>
-        <div class="form-group">
-          <label for="buyerName">Buyer Name:</label>
-          <input type="text" class="form-control" id="buyerName" />
-        </div>
-        <div class="form-group">
-          <label for="date">Date of Conflict:</label>
-          <input type="date" class="form-control" id="date" />
-        </div>
-        <div id="spinner"></div>
-        <button
-          type="button"
-          class="btn custom-button custom-primary-button"
-          id="submitButton">
-          Submit
-        </button>
-
-        <button
-          type="button"
-          class="btn custom-button custom-success-button"
-          id="downloadButton"
-          style="display: none">
-          Download File
-        </button>
-
-        <!-- Button to re-render the page -->
-        <button
-          type="button"
-          class="btn custom-button custom-secondary-button"
-          id="rerenderButton">
-          Re-render Page
-        </button>
-      </form>
-      <div class="mt-4" id="resultDiv">
-        <!-- Result will be displayed here -->
+      <div class="form-group">
+        <label for="ContractType">Type of Contract:</label>
+        <input type="text" class="form-control" id="contractType" placeholder="Enter Contract Type" required />
       </div>
+
+      <div class="form-group">
+        <label for="contractType">Contract Type:</label>
+        <select class="form-control" id="type" required>
+          <option value="rent">Rent</option>
+          <option value="sale">Sale</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <select class="form-control" id="country" required></select>
+      </div>
+
+      <div class="form-group">
+        <label for="language">Language:</label>
+        <select class="form-control" id="language" required></select>
+      </div>
+
+      <div class="form-group">
+        <label for="sellerName">First contractor:</label>
+        <input type="text" class="form-control" id="sellerName" placeholder="Enter name" required />
+      </div>
+      <div class="form-group">
+        <label for="buyerName">Second contractor</label>
+        <input type="text" class="form-control" id="buyerName" placeholder="Enter name" required />
+      </div>
+      <div class="form-group">
+        <label for="date">Date of Contract:</label>
+        <input type="date" class="form-control" id="date" required />
+      </div>
+      <div id="spinner"></div>
+      <button type="button" class="btn custom-button custom-primary-button" id="submitButton">
+        Submit
+      </button>
+
+
+      <button type="button" class="btn custom-button custom-success-button" id="downloadButton" style="display: none">
+        Download File
+      </button>
+
+      <!-- Button to re-render the page -->
+      <button type="button" class="btn custom-button custom-secondary-button" id="rerenderButton">
+        Re-render Page
+      </button>
+
+
+    </form>
+    <div class="mt-4" id="resultDiv">
+      <!-- Result will be displayed here -->
     </div>
+  </div>
 
-    <!-- Bootstrap JS (optional) -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-docx-js/0.5.0/html-docx.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="script.js"></script>
 
-    <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
