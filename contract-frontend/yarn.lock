@@ -12,6 +12,11 @@ convertapi-js@^1.0.8:
   resolved "https://registry.npmjs.org/convertapi-js/-/convertapi-js-1.0.8.tgz"
   integrity sha512-iuwiXXyUEL4MqQgW7j/wRkxtaN4QrY1D9P/XEcumTHOEUSgvUe7idzvmDxAP+6eO+ZJ4FHQmZ8D9wjKDPy08bg==
 
+dotenv@^16.3.1:
+  version "16.3.1"
+  resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.3.1.tgz"
+  integrity sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==
+
 esbuild@^0.17.5:
   version "0.17.12"
   resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.17.12.tgz"

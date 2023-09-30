@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   const resultDiv = document.getElementById("resultDiv");
   const submitButton = document.getElementById("submitButton");
@@ -47,9 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
     }
-
     // Make a POST request to the /generate API
-    fetch("http://localhost:3000/generate", {
+    fetch(`http://localhost:3000/generate`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

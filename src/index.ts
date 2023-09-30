@@ -11,6 +11,6 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.post("/generate", generateContract);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server starting ...");
 });

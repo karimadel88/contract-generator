@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+#Prerequisites
+Before you begin, ensure you meet the following requirements:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Node.js and npm (Node Package Manager)
+You will need Node.js and npm installed on your development machine. Follow these steps to install them:
 
-## Available Scripts
+Installing Node.js and npm
+For macOS and Linux:
 
-In the project directory, you can run:
+Open your terminal.
 
-### `npm start`
+Install Node Version Manager (nvm) for managing Node.js versions:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+bash
+Copy code
+# Install nvm using curl
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+or using wget:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+bash
+Copy code
+# Install nvm using wget
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+Make sure to replace v0.39.1 with the latest version if necessary.
 
-### `npm test`
+Close and reopen your terminal, or run the following command to apply changes:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
+Copy code
+source ~/.bashrc  # Or source ~/.zshrc for Zsh users
+Install Node.js and npm using nvm:
 
-### `npm run build`
+bash
+Copy code
+nvm install node
+Verify that Node.js and npm were successfully installed:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash
+Copy code
+node -v
+npm -v
+For Windows:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Visit the official Node.js website.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Download the latest LTS (Long Term Support) version for Windows (64-bit).
 
-### `npm run eject`
+Run the installer and follow the installation instructions.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Note: If you prefer using Yarn over npm, you can install Yarn globally using npm with this command:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+Copy code
+npm install -g yarn
+Ensure that you've completed these steps to install Node.js and npm (or Yarn) on your development machine before proceeding with the project setup.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Step 2: Start the Server
+Navigate to the back-end directory of your project and initiate the server:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+bash
+Copy code
+# Navigate to the back-end directory
+cd server
 
-## Learn More
+# Start the server using Yarn
+yarn start
+Your server is now up and running.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Step 3: Start the Front-end
+Open a new terminal window, navigate to the front-end directory of your project, and launch the front-end development server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+bash
+Copy code
+# In a new terminal window, navigate to the front-end directory
+cd client
+
+# Start the front-end development server using Yarn
+yarn dev
+The front-end development server is now running.
+
+Step 4: Access the Application
+You can access the application in your web browser by opening http://localhost:5173.
+
+Please keep in mind that these instructions assume your project structure and setup are correctly configured. If you encounter any issues during installation or startup, review your project's configuration and dependencies.

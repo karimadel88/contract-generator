@@ -1,4 +1,6 @@
 import OpenAI from "openai";
+import dotenv from 'dotenv';
+dotenv.config();
 
 export async function generateContractService(
   language: string,
@@ -10,10 +12,10 @@ export async function generateContractService(
   contractType: string
 ) {
   const openai = new OpenAI({
-    apiKey: "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",
+    apiKey:process.env.OPENAI_API_KEY
   });
   const response = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
+    model: process.env.GPT,
     messages: [
       {
         role: "system",
@@ -35,4 +37,15 @@ export async function generateContractService(
   });
 
   return response.choices[0].message.content;
+}
+
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
+      [key: string]: string | undefined;
+      OPENAI_API_KEY: string;
+      GPT: string;
+      PORT:string
+    }
+  }
 }
