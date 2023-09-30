@@ -1,57 +1,48 @@
-#Prerequisites
+Prerequisites
 Before you begin, ensure you meet the following requirements:
 
-Node.js and npm (Node Package Manager)
-You will need Node.js and npm installed on your development machine. Follow these steps to install them:
-
+Node.js and npm (Node Package Manager): You'll need Node.js and npm installed on your development machine. Follow these steps to set them up:
 Installing Node.js and npm
 For macOS and Linux:
-
 Open your terminal.
 
-Install Node Version Manager (nvm) for managing Node.js versions:
+Install Node Version Manager (nvm), which allows you to manage Node.js versions:
 
-bash
-Copy code
 # Install nvm using curl
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
 or using wget:
 
-bash
-Copy code
 # Install nvm using wget
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
 Make sure to replace v0.39.1 with the latest version if necessary.
 
 Close and reopen your terminal, or run the following command to apply changes:
 
-bash
-Copy code
 source ~/.bashrc  # Or source ~/.zshrc for Zsh users
-Install Node.js and npm using nvm:
 
-bash
-Copy code
+Install Node.js and npm using nvm:
 nvm install node
+
 Verify that Node.js and npm were successfully installed:
 
-bash
-Copy code
 node -v
 npm -v
-For Windows:
+
+
+#For Windows:
 
 Visit the official Node.js website.
 
 Download the latest LTS (Long Term Support) version for Windows (64-bit).
 
-Run the installer and follow the installation instructions.
+#Run the installer and follow the installation instructions.
 
 Note: If you prefer using Yarn over npm, you can install Yarn globally using npm with this command:
 
-bash
-Copy code
 npm install -g yarn
+
 Ensure that you've completed these steps to install Node.js and npm (or Yarn) on your development machine before proceeding with the project setup.
 
 Step 2: Start the Server
